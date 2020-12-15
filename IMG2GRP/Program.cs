@@ -27,7 +27,7 @@ namespace IMG2GRP
                     Graphics a;
                     using (a = Graphics.FromImage(input))
                     {
-                        a.DrawImageUnscaled(tmp, new Point(0, 0));
+						a.DrawImage(tmp, 0, 0, tmp.Width, tmp.Height);
                     }
                     byte[] process = new byte[524416];
                     Console.WriteLine("Writing header & footer to file...");
